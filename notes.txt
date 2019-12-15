@@ -1,0 +1,17 @@
+Block elements
+Eg: <div>
+
+
+Inline elements
+eg: <button>
+
+
+li+li
+sibling selector
+
+Resources
+Lorem ipsum.com
+Color hunt.com
+Font pair 
+
+learn about color theory

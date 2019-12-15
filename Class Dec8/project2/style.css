@@ -1,0 +1,28 @@
+body{
+    background-color: #eeeeee;
+    font-family: "Karla",sans-serif;
+}
+
+#quote-holder{
+    background-color: #00adb5;
+    max-width: 600px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10%;
+    margin: 30px auto 60px;
+}
+
+#quote{
+    margin-bottom: 25px;
+}
+
+#author{
+    text-align: right;
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif;
+    margin-bottom: 30px;
+}
+
+#button-holder{
+    text-align: center;
+}

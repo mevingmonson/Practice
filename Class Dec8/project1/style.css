@@ -1,0 +1,26 @@
+h1 {
+    color: #222831;
+    text-align: center;
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+#button-holder {
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    font-weight: 900;
+    background-color: #00adb5;
+    color: #393e46;
+    border-radius: 10px;
+    border: none;
+}
+
+p{
+    max-width: 400px;
+}
