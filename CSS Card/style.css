@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  color:444;
+  font-family:Roboto;
+  padding:50px;
+  background:linear-gradient(rgba(255,0,0,0.5), rgba(255,0,0,0.8));
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+.pizza{
+  max-width:800px;
+  border-radius:10px;
+  display:flex;
+  align-items:stretch;
+  overflow:hidden;
+}
+
+.pizza_hero{
+  flex: 0 0 45%;
+}
+.pizza_content{
+  background:#f1f189;
+  flex:1;
+}
+
+.pizza-heading{
+  margin: 10px 15px;
+}
+.pizza-title{
+  margin:15px 5px;
+  display:flex;
+ 
+
+}
+
+.pizza-tag{
+  margin-left:10px;
+  border-radius:10px;
+  color:white;
+  padding:3px 5px;
+  font-size:14px;
+}
+
+.tag1{
+  background-color:#FF5733;
+}
+
+.tag2{
+  background-color:#C70039;
+}
+
+.pizza-desc{
+  padding: 10px 15px;
+  text-align:justify;
+}
+
+.pizza_price{
+  background:#fff;
+  flex:0 0 50px;
+  font-size:18px;
+  writing-mode:vertical-rl;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
