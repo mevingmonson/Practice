@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .grid-container{
+                background-color:rgb(180, 178, 178);
+                padding: 10px;
+                display: grid;
+                grid-gap: 5px;
+                grid-template-areas: 
+                'header header header header'
+                'side-menu main-area main-area main-area'
+                'side-menu main-area main-area main-area'
+                'side-menu footer footer footer';
+            }
+            .grid-container div{
+                background-color: red;
+                margin: 5px;
+                text-align: center;
+            }
+            .item1{
+                grid-area: header;
+                height: 100px;
+            }
+            .item2{
+                grid-area: side-menu;
+            }
+            .item3{
+                grid-area: main-area;
+                height: 400px;
+            }
+            .item4{
+                grid-area: footer;
+                height: 100px;
+            }
+
+            .navigation{
+                background-color: whitesmoke;
+                display: grid;
+                grid-gap: 5px;
+                grid-template-areas:
+                'home contact signup';
+                align-items: flex-end;
+
+            }
+            .navigation div{
+                background-color: teal;
+                color: yellow;
+            }
+            .home{ grid-area: home;}
+            .contact{ grid-area: contact;}
+            .signup{ grid-area: signup;}
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="item1">Header
+                <div class="navigation">
+                    <div class="home">Home</div>
+                    <div class="contact">Contact</div>
+                    <div class="signup">Sign Up</div>
+                </div>
+            </div>
+            <div class="item2">SideMenu</div>
+            <div class="item3">Main Area</div>
+            <div class="item4">Footer</div>
+        </div>
+    </body>
+</html>
