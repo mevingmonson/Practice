@@ -48,9 +48,13 @@ function calcAges(el) {
     return 2016 - el;
 }
 
-function isFullAge(el) {
-    return el >= 18;
+function isFullAge(limit, el) {
+    return el >= limit;
 }
+
+// function isFullAge(el) {
+//     return el >= 18;
+// }
 
 function heartRate(el) {
     if (el >= 18 && el <= 81) {
@@ -68,6 +72,10 @@ console.log(fullAges);
 
 var rates = arraryCalc(ages, heartRate);
 console.log(rates);
+
+var japanAges = arraryCalc(ages, isFullAge.bind(this,20));
+console.log('Japan Ages');
+console.log(japanAges);
 
 
 console.log('Functions Returning Functions');
@@ -154,15 +162,15 @@ var johny = {
 
 johny.presentation('formal', 'Morning');
 
-var soumya ={
-    name : 'Soumya',
+var soumya = {
+    name: 'Soumya',
     age: 24,
     job: 'Painting'
 };
 
-johny.presentation.call(soumya,'casual','evening');
+johny.presentation.call(soumya, 'casual', 'evening');
 
-var johnyFormal = johny.presentation.bind(johny,'formal');
+var johnyFormal = johny.presentation.bind(johny, 'formal');
 johnyFormal('Afternoon');
 johnyFormal('Evening');
 
