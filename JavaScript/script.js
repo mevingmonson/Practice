@@ -101,3 +101,68 @@ unknownQuestion('ShibuMon');
 
 interviewQuestion('teacher')('TintuMon');
 interviewQuestion()('MinnaMol');
+
+console.log('Immediately Invoked Functions Expression (IIFE)');
+
+(function () {
+    var score = Math.random() * 10;
+    console.log(score);
+    console.log(score >= 5);
+})();
+
+(function (point) {
+    var score = Math.random() * 10;
+    console.log(score);
+    console.log(score >= point);
+})(5);
+
+
+console.log('Closures');
+
+function retirement(retirementAge) {
+    var a = 'years left until retirement';
+    return function (yearOfBirth) {
+        var age = 2020 - yearOfBirth;
+        console.log(retirementAge - age + a);
+    }
+}
+
+var retirementUS = retirement(67);
+retirementUS(1990);
+
+var retirementIND = retirement(66);
+retirementIND(1995);
+
+retirement(65)(1993);
+
+
+console.log('Call, Apply and Bind methods');
+
+var johny = {
+    name: 'John',
+    age: 46,
+    job: 'teacher',
+    presentation: function (style, timeOfDay) {
+        if (style === 'formal') {
+            console.log('Good' + timeOfDay + ' My name is ' + this.name + '.' + 'I am ' + this.age + 'year\'s old.');
+        }
+        else if (style === 'casual') {
+            console.log('What\'s up!? I\'m ' + this.name + '.' + 'I am ' + this.age + 'year\'s old.' + 'Have a nice ' + timeOfDay);
+        }
+    }
+};
+
+johny.presentation('formal', 'Morning');
+
+var soumya ={
+    name : 'Soumya',
+    age: 24,
+    job: 'Painting'
+};
+
+johny.presentation.call(soumya,'casual','evening');
+
+var johnyFormal = johny.presentation.bind(johny,'formal');
+johnyFormal('Afternoon');
+johnyFormal('Evening');
+
