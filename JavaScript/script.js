@@ -73,7 +73,7 @@ console.log(fullAges);
 var rates = arraryCalc(ages, heartRate);
 console.log(rates);
 
-var japanAges = arraryCalc(ages, isFullAge.bind(this,20));
+var japanAges = arraryCalc(ages, isFullAge.bind(this, 20));
 console.log('Japan Ages');
 console.log(japanAges);
 
@@ -173,4 +173,73 @@ johny.presentation.call(soumya, 'casual', 'evening');
 var johnyFormal = johny.presentation.bind(johny, 'formal');
 johnyFormal('Afternoon');
 johnyFormal('Evening');
+
+/////////////////////////////
+// CODING CHALLENGE
+
+
+/*
+--- Let's build a fun quiz game in the console! ---
+
+1. Build a function constructor called Question to describe a question. A question should include:
+a) question itself
+b) the answers from which the player can choose the correct one (choose an adequate data structure here, array, object, etc.)
+c) correct answer (I would use a number for this)
+
+2. Create a couple of questions using the constructor
+
+3. Store them all inside an array
+
+4. Select one random question and log it on the console, together with the possible answers (each question should have a number) (Hint: write a method for the Question objects for this task).
+
+5. Use the 'prompt' function to ask the user for the correct answer. The user should input the number of the correct answer such as you displayed it on Task 4.
+
+6. Check if the answer is correct and print to the console whether the answer is correct ot nor (Hint: write another method for this).
+
+7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
+*/
+
+
+var Question = function (ques, option, ans) {
+    this.ques = ques;
+    this.option = option;
+    this.ans = ans;
+
+}
+
+Question.prototype.optionAnswers = function (selOption) {
+    if (this.option[selOption] === this.ans) {
+        console.log('Correct Answer');
+    }
+    else {
+        console.log('Incorrect Answer');
+    }
+};
+
+var q0 = new Question('Which is the capital of India?', ['Kochi', 'Delhi', 'Mumbai'], 'Delhi');
+var q1 = new Question('Who is the President of India?', ['Ram Nath Kovind', 'Pratibha Patil', 'A. P. J. Abdul Kalam'], 'Ram Nath Kovind');
+
+var quizSet = [q0, q1];
+
+console.log('Quiz Time');
+// quiz();
+
+// function quiz() {
+
+// }
+
+(function () {
+    var num = Math.floor(Math.random() * 2);
+    console.log('Number is ' + num);
+    if (num === 0) {
+        console.log(quizSet[num].ques);
+        console.log(quizSet[num].option);
+    }
+    else {
+        console.log(quizSet[num].ques);
+        console.log(quizSet[num].option);
+    }
+    var selOption = prompt('Which is the correct answer?');
+    quizSet[num].optionAnswers(selOption);
+})();
 
