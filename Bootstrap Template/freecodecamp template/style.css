@@ -1,5 +1,7 @@
 .navbar {
     background: #F97300;
+    margin-bottom: 0px !important;
+    border-radius: 0px !important;
 }
 
 .nav-link, .navbar-brand {
@@ -12,12 +14,14 @@
 }
 
 .nav-link:hover {
-    background: #f4f4f4;
-    color: #f97300;
+    background: #F97300;
+    ;
+    color: #555555;
+    text-decoration: none;
 }
 
-.navbar-collapse {
-    justify-content: flex-end;
+.navbar-nav {
+    float: right !important;
 }
 
 .navbar-toggler {
@@ -30,4 +34,73 @@
 
 .bg-primary {
     background-color: #007bff!important
+}
+
+.header {
+    background-image: url('https://images.unsplash.com/photo-1512429234305-12fe5b0b0f07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to right, rgba(10, 10, 10, 0.575), rgba(10, 10, 10, 0.575));
+}
+
+.description {
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+}
+
+.description h1 {
+    color: #F97300;
+}
+
+.description p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    /* width: 50%; */
+    line-height: 1.5;
+}
+
+.description button {
+    border: 1px solid #F97300;
+    background: #F97300;
+    color: #fff;
+}
+
+.about {
+    margin: 4em 0;
+    padding: 1em;
+    position: relative;
+}
+
+.about h1 {
+    color: #F97300;
+    margin: 2em;
+}
+
+.about img {
+    height: 100%;
+    width: 100%;
+}
+
+.about .desc {
+    padding: 2em;
+    border-left: 4px solid #F97300;
+}
+
+.about .desc h3 {
+    color: #F97300;
+}
+
+.about .desc p {
+    line-height: 2;
+    color: #888;
 }
