@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sample Template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <style>
-            .row div{
-                border: 1px solid black;
-                padding: 2px;
-            }
-            .container{
-                padding: 10px 0;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
+
+<head>
+    <title>Sample Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .row div {
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+        /* .container {
+            padding: 10px 0;
+            text-align: center;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
         <div class="row">
-            <div class="col col-sm-12 col-md-12 col-lg-6 col-md-6">IMAGE</div>
-            <div class="col col-sm-12 col-md-12 col-lg-6 col-md-6">Input</div>
+            <div class="col-sm-12 col-md-12 col-lg-6 col-md-6">IMAGE</div>
+            <div class="col-sm-12 col-md-12 col-lg-6 col-md-6">Input</div>
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-3 col-md-3">Home</div>
@@ -35,5 +38,181 @@
             <div class="col-sm-12 col-md-12 col-lg-9 col-md-9">MainContent</div>
         </div>
     </div>
-    </body>
+
+    <div class="container">
+        <div class="row">
+            <div class=".col-4">Column</div>
+            <div class=".col-4">Column</div>
+            <div class=".col-4">Column</div>
+        </div>
+        <div class="row">
+            <div class="w-100"></div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+        </div>
+    </div>
+
+    <h1>Practice</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+        </div>
+    </div>
+    <p>Second Container</p>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                1 of 2
+            </div>
+            <div class="col">
+                2 of 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col">
+                2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+    </div>
+    <p>New</p>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col-6">
+                2 of 3 (wider)
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col-5">
+                2 of 3 (wider)
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+    </div>
+    <p>BreakPoint</p>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-2">
+                1 of 3
+            </div>
+            <div class="col-md-auto">
+                Variable width content
+            </div>
+            <div class="col col-lg-2">
+                3 of 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col-md-auto">
+                Variable width content
+            </div>
+            <div class="col col-lg-2">
+                3 of 3
+            </div>
+        </div>
+    </div>
+    <p>small</p>
+    <div class="row">
+        <div class="col-sm-8">col-sm-8</div>
+        <div class="col-sm-4">col-sm-4</div>
+    </div>
+    <div class="row">
+        <div class="col-sm">col-sm</div>
+        <div class="col-sm">col-sm</div>
+        <div class="col-sm">col-sm</div>
+    </div>
+
+
+    <p>Mobile</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+            <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        </div>
+
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <div class="row">
+            <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        </div>
+
+        <!-- Columns are always 50% wide, on mobile and desktop -->
+        <div class="row">
+            <div class="col-6">.col-6</div>
+            <div class="col-6">.col-6</div>
+        </div>
+    </div>
+
+    <p>Flex</p>
+    <div class="container">
+        <div class="row align-items-start h-50">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+    </div>
+    <div style="height: 100px; background-color: rgba(255,0,0,0.1);">
+        <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 25%</div>
+        <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 50%</div>
+        <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>
+        <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 100%</div>
+    </div>
+</body>
+
 </html>
