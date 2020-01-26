@@ -1,6 +1,7 @@
 const axios = require("axios");
 
 var output;
+//promise
 axios.get("http://example.com/").then(res => {
     console.log("done");
     output = res;
