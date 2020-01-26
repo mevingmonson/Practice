@@ -10,7 +10,22 @@ mongoose.connect(
     "mongodb+srv://crampete:crampete123@cluster0-jalxg.mongodb.net/library?retryWrites=true&w=majority", { useNewUrlParser: true }
 );
 
-app.get("/book", (req, res) => { });
+app.get("/book/:isbn", (req, res) => {
+    const i = req.params.isbn;
+    console.log(i);
+    Book.find({ isbn: i }).then(book => {
+        if (Book) {
+            return res.send(book);
+        } else {
+            return res.status(404).send({ data: [] });
+        }
+    })
+        .catch(err => {
+            return res.status(500).send({ state: "fail" });
+        });
+});
+
+
 app.get("/user", (req, res) => { });
 
 app.post("/book", (req, res) => {
