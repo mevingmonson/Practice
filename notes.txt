@@ -93,10 +93,29 @@ Breadcrumb
 .breadcrumb
 .breadcrumb-item
 
+Buttons
+---------------
+.btn class
+.btn-link
+disabled class and disables attribute in  a tag and button tag
+.btn-group
+.btn-toolbar
 
+Cards
+-----------
+A content container flexible;extensible
+.card class used with .card-body
+card-image-overlay
 
+Group of cards
+.card-group
+.card-deck
+card-columns for masonary type of grid
+.card-deck
 
-
+Carousal
+-------------
+For slide show
 
 
 
