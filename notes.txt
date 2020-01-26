@@ -15,3 +15,126 @@ Color hunt.com
 Font pair 
 
 learn about color theory
+
+
+Bootstrap
+=============
+Content-Reebot
+Resets browser styles
+H1 to H6 tags ---->>  .h1 to .h2 class 
+.display-1 to .display-6
+.lead class to make a paragraph stand-out
+.blockquote class
+List --->> .list-unstyled and .list-inlined
+<code> </code>
+<pre> </pre> tag is called presentation tag
+<var> </var> tag
+<kbd< </kbd> Keyboard tag to wrap stuff
+<samp> </samp> sample tag
+
+
+classes for image tag
+-----------------------------
+.rounded
+.rounded-ciricle
+.img-thumbnail
+.img-fluid  Responsive image
+
+Alignment
+-------------------
+.float-left
+.float-right
+.mx-auto d-block  is used for center an image
+
+<picture>
+	<source srcset="..." for svg
+</picture>
+
+Table
+---------------------
+.table class is used a base class
+.table-dark  for dark coloured table
+.table-light
+.table-striped  for coloring rows alternatively.
+.table-resposive for responsive table
+.table-bordered
+.table-borderless
+.table-hover  individual rows will be highlighted while hovering
+.table-sm is table small. sm doesn't denote breakpoint sm
+
+contextual class can be used. (Different colors)
+
+Figure
+-------------
+To display imaged with/without captions using <figure> tag
+.figure class is used
+.figure-caption class for caption
+
+
+Bootstrap Components
+===================
+
+Alert
+----------
+.alert is the class
+.alert-<contextual> class is used to display colored alert boxes.
+.alert-link is used to display matching coloured 
+.alert-heading
+.alert-close
+
+Badge
+-------------------
+.badge class
+.badge-pill
+
+
+Breadcrumb
+----------------------
+.breadcrumb
+.breadcrumb-item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

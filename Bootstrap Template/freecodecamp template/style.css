@@ -48,7 +48,7 @@
     min-width: 100%;
     left: 0;
     top: 0;
-    background-image: linear-gradient(to right, rgba(10, 10, 10, 0.575), rgba(10, 10, 10, 0.575));
+    /* background-image: linear-gradient(to right, rgba(10, 10, 10, 0.575), rgba(10, 10, 10, 0.575)); */
 }
 
 .description {
