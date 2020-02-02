@@ -116,6 +116,121 @@ card-columns for masonary type of grid
 Carousal
 -------------
 For slide show
+class = "carousal  data-ride="carousal" 
+data interval
+.carousal-control-next
+.carousal-control-prev
+.carousal-indicators
+
+
+Collapse
+-----------------
+.collapse
+
+DropDown
+---------------------
+Displays links texts and toggleable
+.drop-down class
+.drop-down-divider
+.drop-down-toggle-split
+
+
+Forms
+============
+.form-group used to structure form elements
+.form-control class used to style form 
+.form-control-range
+.valid-tooltip
+.invalid-tooltip
+.custom-range
+
+
+Input Group
+===========
+
+
+Jumbotron
+===========
+Showcase hero or main section
+.jumbtron class
+.jumbtron-fluid class
+
+
+Listgroup
+=========
+
+Media
+=======
+.media
+.media-body
+
+
+Modal entity
+=============
+
+
+Nav
+====
+.nav class is used for <ul> <ol> and <div> tags
+.nav-item is used with <li> tag
+.justify-content-<position> class is used
+.nav-tabs used for tab like navigation
+.nav justified
+
+Navbar
+========
+
+.nav-bar and .navbar-expand
+.nav-brand
+.navbar-nav
+.navbar-toggler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
