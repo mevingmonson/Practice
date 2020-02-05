@@ -177,6 +177,11 @@ Nav
 .nav-tabs used for tab like navigation
 .nav justified
 
+
+Sass
+=====
+
+
 Navbar
 ========
 
@@ -184,6 +189,59 @@ Navbar
 .nav-brand
 .navbar-nav
 .navbar-toggler
+
+Progress
+==========
+.progress
+.progress-bar
+.progress-bar-striped
+.progress-bar-animated
+
+Scrollspy
+============
+used for parallax type of page/section scroll
+data-spy="scroll"
+
+Spinners
+=======
+.spinner-border text-success
+.spinner-grow text-primary
+
+Toast
+=======
+.toast
+.toast-header
+.toast-body
+data-auto-hide property default is true.It has to be set false
+role="alert"
+data-delay propety is used for seting timeout mansually
+Toast has to be enabled in javascript
+
+Tooltip
+==========
+Has to be enabled in javascript
+data-placement property
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'
 
 
 
