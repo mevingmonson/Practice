@@ -1,23 +1,45 @@
 import React from "react";
 
-var studentDetails = [
+let students = [
     {
         name: "Mevin",
-        age: 24,
-        email: "mevingmonson@gmail.com"
+        phonenumber: "8281910028",
+        email: "mevin@gmail.com"
     },
     {
         name: "Robin",
-        age: 28,
-        email: "robinva@gmail.com"
+        phonenumber: "839289183",
+        email: "robin@gmail.com"
     }
 ];
+
+function getStudent(s) {
+    return s.map((ele) => {
+        return (
+            <tr>
+                <td>{ele.name}</td>
+                <td>{ele.phonenumber}</td>
+                <td>{ele.email}</td>
+            </tr>
+        )
+    });
+}
 
 export default function Student() {
     return (
         <div>
-            <h1>Hello</h1>
-            <div>world</div>
+            <table className="text-primary  table table-striped">
+                <thead>
+                    <tr>
+                        <th className="text-success">Name</th>
+                        <th className="text-success">Phone number</th>
+                        <th className="text-success">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {getStudent(students)}
+                </tbody>
+            </table>
         </div>
-    );
+    )
 }
