@@ -288,16 +288,29 @@ const getRelated = publisher => {
 };
 
 
-getIDs.then((IDs) => {
+// getIDs.then((IDs) => {
+// 	console.log(IDs);
+// 	return getRecepie(IDs[2]);
+// })
+// 	.then((recepie) => {
+// 		console.log(recepie);
+// 		return getRelated('Mevin');
+// 	}).then((recepie) => {
+// 		console.log(recepie);
+// 	})
+// 	.catch((error) => {
+// 		console.log(console.error);
+// 	});
+
+
+async function getRecepieAW() {
+	const IDs = await getIDs;
 	console.log(IDs);
-	return getRecepie(IDs[2]);
-})
-	.then((recepie) => {
-		console.log(recepie);
-		return getRelated('Mevin');
-	}).then((recepie) => {
-		console.log(recepie);
-	})
-	.catch((error) => {
-		console.log(console.error);
-	});
+	const recepie = await getRecepie(IDs[2]);
+	console.log(recepie);
+	const related = await getRelated('Mevin');
+	console.log(related);
+	return recepie;
+};
+
+getRecepieAW().then(result => console.log(`${result} is the best`));
