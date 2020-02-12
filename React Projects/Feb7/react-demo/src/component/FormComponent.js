@@ -7,6 +7,7 @@ export default class FormComponent extends React.Component {
             inputValue: 'Stranger'
         };
         this.onKeyUpMethod = this.onKeyUpMethod.bind(this);
+        this.submitMethod = this.submitMethod.bind(this);
     }
 
     onKeyUpMethod(event) {
@@ -14,11 +15,19 @@ export default class FormComponent extends React.Component {
         this.setState({ inputValue: value });
     }
 
+    submitMethod(e) {
+        e.preventDefault();
+        let value = document.getElementById('inputfield').value;
+        this.setState({ inputValue: value });
+    }
+
     render() {
         return (
-            <form>
+            <form onSubmit={this.submitMethod}>
                 <h1>Hello {this.state.inputValue}</h1>
-                <input type='text' onKeyUp={this.onKeyUpMethod}></input>
+                <input type='text' onKeyUp={this.onKeyUpMethod} />
+                <input type='text' id='inputfield' />
+                <input type='submit' value='Submit' />
             </form>
         )
     }
