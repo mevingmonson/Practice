@@ -259,4 +259,45 @@ question.forEach((value, key) => {
 	console.log(`value is ${value} and key is ${key}`);
 });
 
-for()
+
+//	Asynchronous javascript
+console.log('Asynchronous Javascript');
+
+const getIDs = new Promise((resolve, reject) => {
+	setTimeout(() => {
+		resolve([90, 32, 56, 12]);
+	}, 1500);
+});
+
+const getRecepie = recID => {
+	return new Promise((resolve, reject) => {
+		setTimeout((ID) => {
+			const recepie = { title: 'Pizza', publisher: 'Mevin' };
+			resolve(`${ID} : ${recepie.title}`);
+		}, 1500, recID);
+	});
+};
+
+const getRelated = publisher => {
+	return new Promise((resolve, reject) => {
+		setTimeout((pub) => {
+			const recepie = { title: 'Burger', publisher: 'Mevin' };
+			resolve(`${recepie.title} : ${pub}`);
+		}, 1500, publisher);
+	});
+};
+
+
+getIDs.then((IDs) => {
+	console.log(IDs);
+	return getRecepie(IDs[2]);
+})
+	.then((recepie) => {
+		console.log(recepie);
+		return getRelated('Mevin');
+	}).then((recepie) => {
+		console.log(recepie);
+	})
+	.catch((error) => {
+		console.log(console.error);
+	});
