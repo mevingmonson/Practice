@@ -303,14 +303,25 @@ const getRelated = publisher => {
 // 	});
 
 
-async function getRecepieAW() {
-	const IDs = await getIDs;
-	console.log(IDs);
-	const recepie = await getRecepie(IDs[2]);
-	console.log(recepie);
-	const related = await getRelated('Mevin');
-	console.log(related);
-	return recepie;
-};
+// async function getRecepieAW() {
+// 	const IDs = await getIDs;
+// 	console.log(IDs);
+// 	const recepie = await getRecepie(IDs[2]);
+// 	console.log(recepie);
+// 	const related = await getRelated('Mevin');
+// 	console.log(related);
+// 	return recepie;
+// };
 
-getRecepieAW().then(result => console.log(`${result} is the best`));
+// getRecepieAW().then(result => console.log(`${result} is the best`));
+
+
+//Fetch API
+console.log(`Fetch API metaweather`)
+fetch('https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/44418/')
+	.then(result => {
+		console.log(result);
+		return result.json();
+	})
+	.then(data => console.log(data))
+	.catch(error => console.log(error));
