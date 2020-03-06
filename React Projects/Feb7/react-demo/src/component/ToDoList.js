@@ -9,11 +9,14 @@ export default class ToDoList extends React.Component {
         }
         this.onKeyUpMethod = this.onKeyUpMethod.bind(this);
         this.onChange = this.onChange.bind(this);
+        this.doneMethod = this.doneMethod.bind(this);
+        this.editMethod = this.editMethod.bind(this);
+
     }
 
     onKeyUpMethod(event) {
 
-        if (event.keyCode === 13) {
+        if (event.keyCode === 13 && event.target.value !== '') {
             let newValue = {
                 name: event.target.value,
                 done: '',
@@ -28,16 +31,35 @@ export default class ToDoList extends React.Component {
         this.setState({ currrentValue: event.target.value })
     }
 
-    deleteMethod(event) {
+    doneMethod(event) {
         let element = event.target;
-        // this.state.tasks[]
-        element.classList.add('deleteText');
+        let id = event.target.getAttribute('data-id');
+
+        let tasks = this.state.tasks;
+        let t = tasks[id];
+        t.done = t.done == "done" ? "" : "done";
+        this.setState({
+            tasks
+        });
+    }
+
+    editMethod(event) {
+
+
+
     }
 
     displayElements(array) {
         return array.map((element, index) => {
             return (
-                <li className={element.done} key={index} onClick={this.deleteMethod}>{element.name}</li>
+                <li key={index} data-id={index} >
+                    <div>
+                        <input type='checkbox' id={index} onClick={this.doneMethod} data-id={index} />
+                        <label className={element.done}> {element.name}</label>
+                        <input type='button' onClick={this.editMethod} value="Edit" data-id={index} />
+                        <input type='button' onClick={this.deleteMethod} data-id={index} value="Delete" />
+                    </div>
+                </li>
             )
         });
 
@@ -46,7 +68,7 @@ export default class ToDoList extends React.Component {
     render() {
         return (
             <div>
-                <input type='text' id='inputfield' onKeyUp={this.onKeyUpMethod} onChange={this.onChange} value={this.state.currrentValue} />
+                <input type='text' onKeyUp={this.onKeyUpMethod} onChange={this.onChange} value={this.state.currrentValue} />
                 <ul>
                     {this.displayElements(this.state.tasks)}
                 </ul>
