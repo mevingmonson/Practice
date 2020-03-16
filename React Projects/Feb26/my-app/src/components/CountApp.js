@@ -2,16 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class Person extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
+    constructor(props) {
+        super(props);
+        let { name, age } = props;
+        this.state = {
+            name, age
+        };
+    }
     render() {
         return (
-            <h3> Name is {this.props.name}.Age is {this.props.age} </h3 >
+            <p> Name is {this.state.name}.Age is {this.state.age} </p >
         )
     }
 
 }
+
+export default Person;
+
 
 function PersonTwo(props) {
     return (
@@ -58,13 +65,13 @@ class CountApp extends React.Component {
 }
 
 
-ReactDOM.render(
-    (
-        <div>
-            <Person name={"Mevin"} age={24} />
-            <PersonTwo name={"Anand"} age={28} />
-            <CountApp />
-        </div>
-    ),
-    document.getElementById('root')
-)
+// ReactDOM.render(
+//     (
+//         <div>
+//             <Person name={"Mevin"} age={24} />
+//             <PersonTwo name={"Anand"} age={28} />
+//             <CountApp />
+//         </div>
+//     ),
+//     document.getElementById('root')
+// )

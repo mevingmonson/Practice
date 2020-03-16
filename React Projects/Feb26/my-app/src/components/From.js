@@ -1,4 +1,8 @@
-import React from 'react'
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable indent */
+/* eslint-disable linebreak-style */
+/* eslint-disable react/jsx-indent */
+import React from 'react';
 
 export default function From(props) {
     return (
@@ -15,5 +19,5 @@ export default function From(props) {
                 </div>
             </div>
         </form>
-    )
+    );
 }

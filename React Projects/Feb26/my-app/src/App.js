@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Form from './components/From'
 import ListContainer from './components/ListContainer'
+import Person from './components/CountApp'
 
 export default class App extends Component {
     constructor(props) {
@@ -34,8 +35,11 @@ export default class App extends Component {
         return (
             <div className="container">
                 <h2>Hello</h2>
+                <Person name="Mevin" age={25} />
                 <Form onSubmit={this.handleSubmit} />
                 <ListContainer list={this.state.list} />
+                {console.log(this.state.list)}
+
             </div>
         )
     }

@@ -1,5 +1,11 @@
-import React from 'react'
-import ListItem from './ListItem'
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
+/* eslint-disable indent */
+/* eslint-disable react/jsx-indent */
+/* eslint-disable linebreak-style */
+
+import React from 'react';
+import ListItem from './ListItem';
 
 export default function ListContainer(props) {
     return (
@@ -10,7 +16,7 @@ export default function ListContainer(props) {
                 ))
             }
         </ul>
-    )
+    );
 }
 
 // const ListContainer = props => (
